@@ -1,8 +1,11 @@
 package edu.mum.cs.cs425.demowebapps.eregistrar.eregistrar.controller;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -12,8 +15,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-
-import com.fasterxml.jackson.annotation.JsonCreator.Mode;
 
 import edu.mum.cs.cs425.demowebapps.eregistrar.eregistrar.model.Student;
 import edu.mum.cs.cs425.demowebapps.eregistrar.eregistrar.service.StudentService;
@@ -77,8 +78,20 @@ public class StudentController {
     }
 
     @GetMapping(value = "/delete/{studentId}")
-    public String delePublisher(@PathVariable Long studentId) {
+    public String deleteStudent(@PathVariable Long studentId) {
         studentService.deleteStudentById(studentId);
         return "redirect:/eregistrar/student/list";
+    }
+
+    @GetMapping(value = "/search")
+    public ModelAndView findStudent(Model model, @Param("keyword") String keyword) {
+        System.out.println(keyword);
+        List<Student> students = studentService.getByKeyword(keyword);
+        students.forEach(System.out::println);
+
+        var modelAndView = new ModelAndView();
+        modelAndView.addObject("students", students);
+        modelAndView.setViewName("secured/student/list");
+        return modelAndView;
     }
 }

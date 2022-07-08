@@ -14,4 +14,6 @@ public interface StudentService {
     Student updatetStudent(Student updateStudent);
 
     void deleteStudentById(Long studentId);
+
+    public abstract List<Student> getByKeyword(String keyword);
 }

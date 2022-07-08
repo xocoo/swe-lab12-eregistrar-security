@@ -9,9 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -35,13 +33,11 @@ public class Student {
     private String studentNumber;
 
     @NotBlank(message = "First Name cannot be null or empty or blank spaces")
-    // @Size(min = 5, max = 250)
     private String firstName;
 
     private String middleName;
 
     @NotBlank(message = "Last Name cannot be null or empty or blank spaces")
-    // @Size(min = 5, max = 250)
     private String lastName;
 
     private double cgpa;

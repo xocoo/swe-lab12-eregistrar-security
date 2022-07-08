@@ -44,4 +44,8 @@ public class StudentServiceImpl implements StudentService {
 
     }
 
+    @Override
+    public List<Student> getByKeyword(String keyword) {
+        return studentRepository.findByKeyword(keyword);
+    }
 }
