@@ -49,4 +49,14 @@ public class Student {
     @NotNull(message = "is International cannot be null")
     private boolean isInternational;
 
+    public boolean isIsInternational() {
+        return isInternational;
+    }
+
+    /**
+     * @param isInternational the isInternational to set
+     */
+    public void setIsInternational(boolean isInternational) {
+        this.isInternational = isInternational;
+    }
 }
