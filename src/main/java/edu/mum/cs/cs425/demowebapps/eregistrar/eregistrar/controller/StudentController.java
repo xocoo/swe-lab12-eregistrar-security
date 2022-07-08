@@ -75,4 +75,10 @@ public class StudentController {
         studentService.updatetStudent(student);
         return "redirect:/eregistrar/student/list";
     }
+
+    @GetMapping(value = "/delete/{studentId}")
+    public String delePublisher(@PathVariable Long studentId) {
+        studentService.deleteStudentById(studentId);
+        return "redirect:/eregistrar/student/list";
+    }
 }
