@@ -18,7 +18,8 @@
                     <a class="nav-link" href="/eregistrar/student/list">Student</a>
                 </li>
             </ul>
-            <form class="d-flex" th:action="@{/eregistrar/student/search}" method="get">
+            <form sec:authorize="isAuthenticated()" class="d-flex" th:action="@{/eregistrar/student/search}"
+                method="get">
                 <input class="form-control me-sm-2" type="text" name="keyword" th:value="${keyword}"
                     placeholder="Find by First Name" size="20">
                 <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
@@ -32,9 +33,8 @@
                 <span sec:authorize="isAnonymous()" style="color:#fff;padding-left: 2em; padding-right: 1em;">Welcome,
                     Guest</span>
                 <span sec:authorize="isAuthenticated()"
-                    style="color:#fff;padding-left: 0em; padding-right: 0.5em;">Welcome,
-                </span><span sec:authorize="isAuthenticated()"
-                    style="color:#fff;padding-left: 0em; padding-right: 0.5em;"
+                    style="color:#fff;padding-left: 0em; padding-right: 0.5em;">Welcome, </span><span
+                    sec:authorize="isAuthenticated()" style="color:#fff;padding-left: 0em; padding-right: 0.5em;"
                     sec:authentication="principal.fullName"></span>
                 <a sec:authorize="isAnonymous()" href="/eregistrar/public/login" class="btn btn-secondary">
                     <i class="fa-solid fa-arrow-right-to-bracket"></i> Sign In

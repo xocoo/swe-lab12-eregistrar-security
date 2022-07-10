@@ -46,10 +46,10 @@
                             <td th:unless="${student.isInternational}"><span class="badge bg-primary">No</span>
                             <td scope="col"><a
                                     th:href="@{'/eregistrar/student/edit/{studentId}'(studentId=${student.studentId})}"
-                                    class="btn btn-light">Edit</a></th>
+                                    class="btn btn-secondary">Edit</a></th>
                             <td scope="col"><a
                                     th:href="@{'/eregistrar/student/delete/{studentId}'(studentId=${student.studentId})}"
-                                    class="btn btn-secondary">Delete</a></th>
+                                    class="btn btn-danger">Delete</a></th>
                             </td>
                         </tr>
                     </tbody>

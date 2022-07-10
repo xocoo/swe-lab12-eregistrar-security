@@ -9,6 +9,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import edu.mum.cs.cs425.demowebapps.eregistrar.model.Role;
 import edu.mum.cs.cs425.demowebapps.eregistrar.model.Student;
 import edu.mum.cs.cs425.demowebapps.eregistrar.service.StudentService;
 
@@ -46,6 +47,14 @@ public class EregistrarApplication implements CommandLineRunner {
 		System.out.println(savedStudent2);
 		System.out.println(savedStudent3);
 		System.out.println(savedStudent4);
+
+		List<Role> roles = new ArrayList<Role>() {
+			{
+				add(new Role(null, "ROLE_ADMIN"));
+				add(new Role(null, "ROLE_REGISTRAR"));
+				add(new Role(null, "ROLE_STUDENT"));
+			}
+		};
 
 	}
 
