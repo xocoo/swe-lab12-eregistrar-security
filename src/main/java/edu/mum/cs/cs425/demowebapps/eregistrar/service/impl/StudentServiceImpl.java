@@ -1,13 +1,13 @@
-package edu.mum.cs.cs425.demowebapps.eregistrar.eregistrar.service.impl;
+package edu.mum.cs.cs425.demowebapps.eregistrar.service.impl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import edu.mum.cs.cs425.demowebapps.eregistrar.eregistrar.model.Student;
-import edu.mum.cs.cs425.demowebapps.eregistrar.eregistrar.repository.StudentRepository;
-import edu.mum.cs.cs425.demowebapps.eregistrar.eregistrar.service.StudentService;
+import edu.mum.cs.cs425.demowebapps.eregistrar.model.Student;
+import edu.mum.cs.cs425.demowebapps.eregistrar.repository.StudentRepository;
+import edu.mum.cs.cs425.demowebapps.eregistrar.service.StudentService;
 
 @Service
 public class StudentServiceImpl implements StudentService {

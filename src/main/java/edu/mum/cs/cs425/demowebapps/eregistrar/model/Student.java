@@ -1,4 +1,4 @@
-package edu.mum.cs.cs425.demowebapps.eregistrar.eregistrar.model;
+package edu.mum.cs.cs425.demowebapps.eregistrar.model;
 
 import java.time.LocalDate;
 

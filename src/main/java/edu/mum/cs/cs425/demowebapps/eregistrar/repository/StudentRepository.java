@@ -1,4 +1,4 @@
-package edu.mum.cs.cs425.demowebapps.eregistrar.eregistrar.repository;
+package edu.mum.cs.cs425.demowebapps.eregistrar.repository;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import edu.mum.cs.cs425.demowebapps.eregistrar.eregistrar.model.Student;
+import edu.mum.cs.cs425.demowebapps.eregistrar.model.Student;
 
 @Repository
 public interface StudentRepository extends JpaRepository<Student, Long> {

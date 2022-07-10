@@ -1,8 +1,8 @@
-package edu.mum.cs.cs425.demowebapps.eregistrar.eregistrar.service;
+package edu.mum.cs.cs425.demowebapps.eregistrar.service;
 
 import java.util.List;
 
-import edu.mum.cs.cs425.demowebapps.eregistrar.eregistrar.model.Student;
+import edu.mum.cs.cs425.demowebapps.eregistrar.model.Student;
 
 public interface StudentService {
     public abstract Student addNewStudent(Student student);

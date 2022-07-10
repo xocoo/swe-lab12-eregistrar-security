@@ -1,4 +1,4 @@
-package edu.mum.cs.cs425.demowebapps.eregistrar.eregistrar.controller;
+package edu.mum.cs.cs425.demowebapps.eregistrar.controller;
 
 import java.util.List;
 
@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import edu.mum.cs.cs425.demowebapps.eregistrar.eregistrar.model.Student;
-import edu.mum.cs.cs425.demowebapps.eregistrar.eregistrar.service.StudentService;
+import edu.mum.cs.cs425.demowebapps.eregistrar.model.Student;
+import edu.mum.cs.cs425.demowebapps.eregistrar.service.StudentService;
 
 @Controller
 @RequestMapping(value = { "/eregistrar/student" })

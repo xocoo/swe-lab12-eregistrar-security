@@ -1,4 +1,4 @@
-package edu.mum.cs.cs425.demowebapps.eregistrar.eregistrar;
+package edu.mum.cs.cs425.demowebapps.eregistrar;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -9,8 +9,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import edu.mum.cs.cs425.demowebapps.eregistrar.eregistrar.model.Student;
-import edu.mum.cs.cs425.demowebapps.eregistrar.eregistrar.service.StudentService;
+import edu.mum.cs.cs425.demowebapps.eregistrar.model.Student;
+import edu.mum.cs.cs425.demowebapps.eregistrar.service.StudentService;
 
 @SpringBootApplication
 public class EregistrarApplication implements CommandLineRunner {
