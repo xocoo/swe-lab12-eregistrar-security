@@ -13,17 +13,19 @@
                 <li class="nav-item" style="border-left: white 1px solid; padding-left: 2em; padding-right: 2em;">
                     <a class="nav-link" href="/eregistrar/public/about">About</a>
                 </li>
-                <li sec:authorize="isAuthenticated()" class="nav-item"
+                <li sec:authorize="hasRole('ROLE_ADMIN')" class="nav-item"
+                    style="border-left: white 1px solid; padding-left: 2em; padding-right: 2em;">
+                    <a class="nav-link" href="/secured/admin/usrmgmt/list">User</a>
+                </li>
+                <li sec:authorize="hasRole('ROLE_REGISTRAR')" class="nav-item"
                     style="border-left: white 1px solid; padding-left: 2em; padding-right: 2em;">
                     <a class="nav-link" href="/eregistrar/student/list">Student</a>
                 </li>
+                <li sec:authorize="hasRole('ROLE_STUDENT')" class="nav-item"
+                    style="border-left: white 1px solid; padding-left: 2em; padding-right: 2em;">
+                    <a class="nav-link" href="/eregistrar/classroom/list">Class rooms</a>
+                </li>
             </ul>
-            <form sec:authorize="isAuthenticated()" class="d-flex" th:action="@{/eregistrar/student/search}"
-                method="get">
-                <input class="form-control me-sm-2" type="text" name="keyword" th:value="${keyword}"
-                    placeholder="Find by First Name" size="20">
-                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-            </form>
         </div>
         <div>
             <form name="logoutForm" th:hidden="true" method="post" th:action="@{/eregistrar/public/logout}">

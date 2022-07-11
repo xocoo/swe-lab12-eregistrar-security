@@ -6,14 +6,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping(value = { "", "/eregistrar" })
-public class HomePageController {
+public class HomeController {
     @GetMapping(value = { "/", "/public/home" })
     public String displayHomePage() {
-        return "public/home/index";
+        return "public/index";
     }
 
     @GetMapping(value = { "/public/about" })
     public String displayAboutPage() {
-        return "public/home/about";
+        return "public/about";
     }
 }

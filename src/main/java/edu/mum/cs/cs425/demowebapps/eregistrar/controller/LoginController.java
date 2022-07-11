@@ -14,7 +14,7 @@ public class LoginController {
 
     @GetMapping(value = { "/public/login", "/eregistrar/public/login" })
     public String displayLoginPage() {
-        return "public/login/login";
+        return "public/login";
     }
 
     @PostMapping(value = { "/public/logout", "/eregistrar/public/logout" })

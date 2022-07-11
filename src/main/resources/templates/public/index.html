@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5" layout:decorate="~{layouts/master-layout}">
 
-<head th:replace="public/fragments/head-elements :: headElements">
+<head>
     <title>eRegistrar - a demo spring boot webapp</title>
 </head>
 
 <body>
-    <div th:replace="public/fragments/header :: header"></div>
-    <p>&nbsp;</p>
-    <div class="container">
+
+    <div class="container" layout:fragment="content">
         <h2>Welcome to the eRegistrar system </h2>
         <hr />
         <div class="row">
@@ -43,7 +43,6 @@
             </div>
         </div>
     </div>
-    <div th:replace="public/fragments/footer :: footer"></div>
 </body>
 
 </html>

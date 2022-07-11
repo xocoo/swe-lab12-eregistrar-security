@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5" layout:decorate="~{layouts/master-layout}">
 
-<head th:replace="public/fragments/head-elements :: headElements">
+<head>
     <title>eRegistrar - Student add</title>
 </head>
 
 <body>
-    <div th:replace="public/fragments/header :: header"></div>
-    <p>&nbsp;</p>
-    <div class="container py-5 h-100">
+    <div class="container py-5 h-100" layout:fragment="content">
         <div class="d-flex justify-content-between">
             <div>
                 <h3>Add new Student </h3>
@@ -92,10 +91,7 @@
                 </div>
         </div>
         </form>
-
     </div>
-    </div>
-    <div th:replace="public/fragments/footer :: footer"></div>
 </body>
 
 </html>
